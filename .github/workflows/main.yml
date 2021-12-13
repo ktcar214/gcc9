@@ -24,7 +24,9 @@ jobs:
       
       - name: Build archlinux package
         uses: ktcar214/arch-makepkg-action@master
-      
+        env: 
+          SIGNING_KEY: ${{ secrets.ACTION_SIGNING_GPG }}
+          
       - name: Release
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
