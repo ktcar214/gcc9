@@ -1,1 +1,1 @@
-echo -n "${SIGNING_KEY}" | gpg --import || exit 8
+git clone -o . https://aur.archlinux.org/gcc9.git
